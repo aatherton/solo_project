@@ -1,0 +1,26 @@
+### design document ###
+
+main screen will have the current image for that time, with a speed selector (slidebar?) as well as stop, play, and rewind buttons. this will increment the time, querying the DB for the new data every [interval] seconds
+
+(togglable "hotspot" circles showing contested areas?)
+
+to the left will be a bar graph, selectable as per the "metal hair" assignment. selections will be available for
+> color presence
+> users per color
+> changes per time
+
+to the right will be a pie graph, detailing white, black, and colored percentages, intended to show the progress of the void
+
+### API endpoints ###
+
+img_at/[timestamp]/[num]
+> """returns ${num} images (svg? jpg?) of the project at that time. ...probably will be called in bursts"""
+
+raw_at/[timestamp]/[num]
+> """returns the raw data at that timestamp."""
+
+clean_at/[timestamp]/[num]
+> """returns the 'cleaned' data at that timestamp- filtered to only include the most recent interactions with each tile"""
+
+### frontend mechanics ###
+
